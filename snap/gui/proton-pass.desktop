@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Proton Pass
+Comment=Open-source and secure identity manager.
+GenericName=Password Manager
+Exec=proton-pass %U
+Icon=${SNAP}/meta/gui/proton-pass-snap.svg
+Terminal=false
+StartupNotify=true
+Categories=Utility;
