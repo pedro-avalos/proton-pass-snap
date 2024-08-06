@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="snap/gui/proton-pass.svg" alt="Proton Pass" width="250px">
+  <img src="snap/gui/proton-pass.svg" alt="Proton Pass" width="256px">
   <br />
   Proton Pass
 </h1>
