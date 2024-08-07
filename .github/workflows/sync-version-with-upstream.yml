@@ -23,10 +23,10 @@ jobs:
           token: ${{ secrets.SNAPCRAFTERS_BOT_COMMIT }}
           update-script: |
             VERSION=$(curl -sL https://proton.me/download/PassDesktop/linux/x64/version.json |
-              jq . | grep Version | head -n 1 | cut -d'"' -f4
+              jq -r .Releases[0].Version
             )
             CHECKSUM=$(curl -sL https://proton.me/download/PassDesktop/linux/x64/version.json |
-              jq . | grep Sha512CheckSum | head -n 1 | cut -d'"' -f4
+              jq -r .Releases[0].File[0].Sha512CheckSum
             )
             sed -i 's/^\(version: \).*$/\1'"$VERSION"'/' snap/snapcraft.yaml
             sed -i 's/\(source-checksum: \).*$/\1'"sha512\/$CHECKSUM"'/' snap/snapcraft.yaml
