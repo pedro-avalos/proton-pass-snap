@@ -1,8 +1,7 @@
-# TODO 'snapcraft register <name>'
 name: proton-pass
 icon: snap/gui/proton-pass.svg
 summary: Proton Pass desktop application.
-adopt-info: proton-pass
+version: 1.22.0
 description: |
   Open-source and secure identity manager.
 
@@ -22,7 +21,7 @@ platforms:
 apps:
   proton-pass:
     command: usr/bin/proton-pass --no-sandbox
-    desktop: meta/gui/proton-pass.desktop
+    desktop: usr/share/applications/proton-pass.desktop
     extensions:
       - gnome
     plugs:
@@ -42,25 +41,7 @@ apps:
 
 parts:
   proton-pass:
-    plugin: npm
-    source-type: git
-    source: https://github.com/ProtonMail/WebClients
-    build-snaps:
-      - node/20/stable
-    build-packages:
-      - jq
-    override-pull: |
-      craftctl default
-      craftctl set version=$(jq -r .version < applications/pass-desktop/package.json)
-    override-build: |
-      yarn install
-      yarn build:desktop
-
-      mkdir -p $CRAFT_PART_INSTALL/usr/lib/proton-pass \
-        $CRAFT_PART_INSTALL/usr/bin
-
-      cp -r applications/pass-desktop/out/Proton\ Pass-linux-x64/* \
-        $CRAFT_PART_INSTALL/usr/lib/proton-pass/
-
-      ln -s ../lib/proton-pass/Proton\ Pass \
-        $CRAFT_PART_INSTALL/usr/bin/proton-pass
+    plugin: dump
+    source-type: deb
+    source: https://proton.me/download/PassDesktop/linux/x64/ProtonPass_$SNAPCRAFT_PROJECT_VERSION.deb
+    source-checksum: sha512/981a9ffa8c2db800cf59f2b863ba24ca4ddfc363b0765beb0eb1aab1b440ff7deb5636e55a9741e6d5ffdd01a7d8431f6ca454ec5bfa1c01abe4c31516885f4f
