@@ -25,8 +25,12 @@ jobs:
             VERSION=$(curl -sL https://proton.me/download/PassDesktop/linux/x64/version.json |
               jq -r .Releases[0].Version
             )
+            SOURCE_URL=$(curl -sL https://proton.me/download/PassDesktop/linux/x64/version.json |
+              jq -r .Releases[0].File[0].Url
+            )
             CHECKSUM=$(curl -sL https://proton.me/download/PassDesktop/linux/x64/version.json |
               jq -r .Releases[0].File[0].Sha512CheckSum
             )
             sed -i 's/^\(version: \).*$/\1'"$VERSION"'/' snap/snapcraft.yaml
+            sed -i 's,\(source: \).*$,\1'"$SOURCE_URL"',' snap/snapcraft.yaml
             sed -i 's/\(source-checksum: \).*$/\1'"sha512\/$CHECKSUM"'/' snap/snapcraft.yaml
