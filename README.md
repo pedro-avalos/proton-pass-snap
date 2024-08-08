@@ -27,9 +27,7 @@ It works on Ubuntu, Fedora, Debian, and other major Linux distributions.</p>
 
     sudo snap install proton-pass
 
-<!-- Uncomment and modify this when your snap is available on the store
-[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-white.svg)](https://snapcraft.io/my-snap-name)
--->
+[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-white.svg)](https://snapcraft.io/proton-pass)
 
 ([Don't have snapd installed?](https://snapcraft.io/docs/core/install))
 
@@ -49,7 +47,7 @@ Snapcrafters ([join us](https://forum.snapcraft.io/t/snapcrafters-reboot/24625))
   - [X] Update snap store metadata, icons and screenshots
   - [X] Publish the confined snap in the Snap store beta channel
   - [X] Update the install instructions in this `README.md`
-  - [X] Post a call for testing in the Snapcraft Forum ["Snapcrafters" category](https://forum.snapcraft.io/c/snapcrafters/23) - [link]()
+  - [X] Post a call for testing in the Snapcraft Forum ["Snapcrafters" category](https://forum.snapcraft.io/c/snapcrafters/23) - [link](https://forum.snapcraft.io/t/call-for-testing-proton-pass/41342)
   - [X] Add the Snapcraft store account (snap-advocacy@canonical.com) as a collaborator to your snap in the [Dashboard](https://dashboard.snapcraft.io) and ask a [Snapcrafters admin](https://github.com/orgs/snapcrafters/people?query=%20role%3Aowner) to accept this request
   - [ ] Fix all important issues found during testing
   - [ ] Make a post in the Snapcraft Forum ["store-requests" category](https://forum.snapcraft.io/c/store-requests/19) asking for a transfer of the snap name from you to Snapcrafters - [link]()
