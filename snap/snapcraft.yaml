@@ -20,7 +20,7 @@ platforms:
 
 apps:
   proton-pass:
-    command: usr/bin/proton-pass --no-sandbox
+    command: launcher
     desktop: usr/share/applications/proton-pass.desktop
     extensions:
       - gnome
@@ -40,6 +40,12 @@ apps:
       - network
 
 parts:
+  launcher:
+    plugin: dump
+    source: launcher
+    override-build: |
+      cp launcher $CRAFT_PART_INSTALL/
+
   proton-pass:
     plugin: dump
     source-type: deb
