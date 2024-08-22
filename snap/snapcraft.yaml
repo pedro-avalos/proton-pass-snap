@@ -35,8 +35,8 @@ apps:
       - gsettings
       - home
       - removable-media
-      - hardware-observe  # NOTE: This seems to allow access to detect security keys...
-      - u2f-devices  # TODO: This should probably auto-connect
+      - hardware-observe
+      - u2f-devices
       - network
 
 parts:
