@@ -3,7 +3,7 @@ icon: snap/gui/proton-pass.svg
 summary: Proton Pass desktop application.
 version: 1.23.1
 description: |
-  NOTE: This a wrapper of the official packages, but it is not verified,
+  NOTE: This is a wrapper of the official package, but it is not verified,
   affiliated with, or supported by Proton AG.
 
   Free and fully encrypted password manager to keep your logins and passwords
