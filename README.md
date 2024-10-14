@@ -4,7 +4,7 @@
   Proton Pass
 </h1>
 
-<p align="center"><b>This is the snap for Proton Pass</b>,
+<p align="center"><b>This is the snap for <a href="https://proton.me/pass">Proton Pass</a></b>,
 <i>“Open-source and secure identity manager”</i>.
 It works on Ubuntu, Fedora, Debian, and other major Linux distributions.</p>
 
