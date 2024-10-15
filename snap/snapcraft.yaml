@@ -1,5 +1,6 @@
 name: proton-pass
 icon: snap/gui/proton-pass.svg
+title: Proton Pass
 summary: Proton Pass desktop application.
 version: 1.23.1
 license: GPL-3.0
