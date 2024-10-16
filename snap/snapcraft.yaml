@@ -96,8 +96,9 @@ platforms:
 
 apps:
   proton-pass:
-    command: launcher
+    command: bin/launcher
     desktop: usr/share/applications/proton-pass.desktop
+    common-id: me.proton.Pass
     extensions:
       - gnome
     plugs:
@@ -118,9 +119,8 @@ apps:
 parts:
   launcher:
     plugin: dump
-    source: launcher
-    override-build: |
-      cp launcher $CRAFT_PART_INSTALL/
+    source: snap/local
+    source-type: local
 
   proton-pass:
     plugin: dump
