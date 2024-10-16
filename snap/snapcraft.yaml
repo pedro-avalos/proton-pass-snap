@@ -21,20 +21,20 @@ description: |
   Pass offers more than other free password managers and has no ads or data
   collection. You can use it for free forever on all your devices to create and
   store unlimited passwords, autofill logins, generate 2FA codes, create email
-  aliases, secure your notes, and more. 
+  aliases, secure your notes, and more.
 
   **Protect your logins and their metadata with battle-tested end-to-end encryption**
 
   While many other password managers only encrypt your password, Proton Pass
   uses end-to-end encryption on all your stored login details (including your
-  username, the website address, and more). 
+  username, the website address, and more).
 
   **Audit Pass's open-source code**
 
   Like all other Proton services, Pass is open source and built on the principle
   of trust through transparency. As scientists, we know that transparency and
   peer review lead to better security. All Proton Pass apps are open source,
-  meaning anyone can verify our security claims for themselves. 
+  meaning anyone can verify our security claims for themselves.
 
   **How can Proton Pass be free forever?**
 
@@ -48,19 +48,19 @@ description: |
   Join over 100 million people who have signed up for Proton's privacy
   ecosystem, which includes Proton Mail, Proton Drive, Proton Calendar, Proton
   VPN, and more. Take back control of your privacy online with our encrypted
-  email, calendar, file storage, and VPN. 
+  email, calendar, file storage, and VPN.
 
-  With Proton Pass, you can:
+  **With Proton Pass, you can:**
 
   * Store and auto-sync unlimited logins on unlimited devices: You can create,
     store, and manage your credentials from anywhere with our browser extension
-    and apps for Android and iPhone. 
+    and apps for Android and iPhone.
   * Sign in faster with Proton Pass autofill: You no longer need to copy and
     paste your username and password. Easily and securely log in with Proton
     Pass autofill technology.
   * Avoid weak passwords: With our built-in secure password generator, you can
     easily generate strong, unique, and random passwords based on the security
-    requirements for every website you sign up to. 
+    requirements for every website you sign up to.
   * Safely store encrypted notes: You can save private notes in Pass and access
     them on all your devices.
   * Create unique email addresses with hide-my-email aliases: Proton Pass helps
@@ -76,7 +76,7 @@ description: |
     or colleagues.
   * Quick offline access to your login data: Access your stored passwords and
     notes in Pass from wherever you are, even when you don't have internet
-    connection. 
+    connection.
   * Secure your Pass account with additional security measures: Protect all your
     data with another layer of protection, either with TOTP or U2F/FIDO2
     security keys.
@@ -96,8 +96,9 @@ platforms:
 
 apps:
   proton-pass:
-    command: launcher
+    command: bin/launcher
     desktop: usr/share/applications/proton-pass.desktop
+    common-id: me.proton.Pass
     extensions:
       - gnome
     plugs:
@@ -118,9 +119,8 @@ apps:
 parts:
   launcher:
     plugin: dump
-    source: launcher
-    override-build: |
-      cp launcher $CRAFT_PART_INSTALL/
+    source: snap/local
+    source-type: local
 
   proton-pass:
     plugin: dump
