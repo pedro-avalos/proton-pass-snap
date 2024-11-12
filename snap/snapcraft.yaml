@@ -2,7 +2,7 @@ name: proton-pass
 icon: snap/gui/proton-pass.svg
 title: Proton Pass
 summary: Proton Pass desktop application.
-version: 1.24.1
+version: 1.24.3
 license: GPL-3.0
 description: |
   NOTE: This is a wrapper of the official package, but it is not verified,
@@ -126,6 +126,6 @@ parts:
     plugin: dump
     source-type: deb
     source: https://proton.me/download/pass/linux/proton-pass_${SNAPCRAFT_PROJECT_VERSION}_amd64.deb
-    source-checksum: sha512/711d1a07747c79994e512881e209c3505ff68441b35a5b8cd9343aab028084ab110d9ec2ddeb52729305d1c6c2aaf36d40ab7f38df53669c561a8b7bff96f62d
+    source-checksum: sha512/3cb1820ea627e7ba3531c9e47226af02c29f8b51eff1304167fa5f39ece6705849827764c0e858c17220daca4ca6e8080a5bc7f17705151995012b5956e24811
     prime:
       - -usr/lib/proton-pass/chrome-sandbox
